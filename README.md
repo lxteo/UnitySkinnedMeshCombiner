@@ -1,0 +1,2 @@
+# UnitySkinnedMeshCombiner
+Combines Unity SkinnedMeshRenderers
