@@ -50,6 +50,7 @@ public class SkinnedMeshCombiner
 
             if (hasBone && comb.SMR != previousSMR)
             {
+                previousSMR = comb.SMR;
                 MapBones(comb, mainMesh);
                 isMainMesh = false;
             }
@@ -142,6 +143,7 @@ public class SkinnedMeshCombiner
                 ind[i] = 0;
             }
         }
+
         resultVertices.Clear();
         resultUvs.Clear();
         resultNormals.Clear();
