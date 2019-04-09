@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SkinnedMeshInstance
+public struct SkinnedMeshInstance
 {
     public Mesh Mesh { get; set; }
     public SkinnedMeshRenderer SMR { get; set; }
