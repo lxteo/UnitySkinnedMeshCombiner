@@ -28,6 +28,11 @@ public class SkinnedMeshCombiner
     private readonly Dictionary<HumanBodyBones, int> transformBoneMapping2 = new Dictionary<HumanBodyBones, int>();
     private readonly Dictionary<int, int> transformBoneMapping3 = new Dictionary<int, int>();
 
+    /// <summary>
+    /// Combines Unity SkinnedMeshRenderers. Takes a list of SkinnedMeshInstance and outputs a single mesh with working bones and blendshapes.
+    /// </summary>
+    /// <param name="combine">List of SkinnedMeshInstance</param>
+    /// <param name="result">Output, will set sharedMesh and sharedMaterials</param>
     public void CombineMeshes(List<SkinnedMeshInstance> combine, SkinnedMeshRenderer result)
     {
         //The instance to use as the base for rigging and blend shapes.
