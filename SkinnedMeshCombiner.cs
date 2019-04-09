@@ -42,12 +42,13 @@ public class SkinnedMeshCombiner
         var currentIndiceCount = 0;
         var currentSubmeshCount = 0;
         var isMainMesh = true;
+        var previousSMR = mainMesh.SMR;
         for (var i = 0; i < combine.Count; i++)
         {
             var comb = combine[i];
             var hasBone = comb.SMR != null;
 
-            if (comb != mainMesh && hasBone && comb.SubMeshIndex == 0)
+            if (hasBone && comb.SMR != previousSMR)
             {
                 MapBones(comb, mainMesh);
                 isMainMesh = false;
